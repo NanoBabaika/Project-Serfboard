@@ -155,39 +155,106 @@
  
         <!-- секция со слайдеромы -->
         <section class="section slider__section">
-            <div class="container">
-              <ul class="slider__list">
-                <li class="slider__item">
-                  <div class="slider_item-leftside">
-                    <div class="slider__img">
-                      <img src="./img/sliderimg1.png" alt="товар">
-                    </div>
-                  </div>
-                  <div class="slider_item-rigthside">
+            <div class="container slider__container">
+              <!-- стрелка в лево -->
+              <div class="arrow__left">
+                <a href="#" id="left" class="arrow__link">
+                  <img class="arrow__img" src="./img/SVG/arrowleft.svg" alt="">
+                </a>
+              </div>
 
-                    <div class="parameters__menu">
-                      <ul class="dropdownlist">
-                        <li class="dropdownlist__item">
-                          <div class="dropdown__icon">
-                            <img src="./img/SVG/length.svg" alt="">
-                          </div>
-                          <p class="dropdown__desc">Длина доски</p>
-                          <p class="dropdown__units">от 2,5 м</p>
-                        </li>
-                      </ul>
-
-                      <h2 class="item-title">Лонгборд 2.0</h2> 
-                      <p class="item_desc">Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
-                      </p>
-
-                      <div class="imtem_feature">
-                        <div class="feature__length"></div>
+              <div class="slider">
+                <ul class="slider__items">
+                  <li class="slider__item">
+                    <div class="slider_item-leftside">
+                      <div class="slider__img">
+                         
+                        <img src="./img/sliderimg1.png" alt="товар">
+  
+                        <svg class="sliderbg" xmlns="http://www.w3.org/2000/svg" width="397" height="379" viewBox="0 0 397 379" fill="none">
+                          <path d="M260.495 23.9363C239.952 -9.62469 178.646 -0.701744 150.56 7.95485C61.4442 40.764 -25.4685 141.288 6.92245 276.642C18.1567 323.588 62.2911 315.597 108.03 315.597C153.77 315.597 133.607 335.038 197 368C260.393 400.962 296.483 343.98 335 327C373.517 310.02 398.407 256.931 396 198C393.593 139.069 357.9 108.979 325 91C292.1 73.0209 286.173 65.8875 260.495 23.9363Z" fill="#ECECEC"/>
+                          </svg>
+              
                       </div>
-
                     </div>
-                  </div>
-                </li>
-              </ul>
+                    <div class="slider_item-rigthside">
+  
+                      <div class="parameters__menu ">
+                        <div class="parameters__menu__btn">
+                          <button class="menu__btn">параметры
+                            <img src="./img/SVG/parametersicon.svg" alt="" class="parameters__icon">
+                          </button>
+                        </div>
+                        <!-- <ul class="dropdownlist">
+                          <li class="dropdownlist__item">
+                            <div class="dropdown__icon">
+                              <img src="./img/SVG/length.svg" alt="">
+                            </div>
+                            <p class="dropdown__desc">Длина доски</p>
+                            <p class="dropdown__units">от 2,5 м</p>
+                          </li>
+                          <li class="dropdownlist__item">
+                            <div class="dropdown__icon">
+                              <img src="./img/SVG/length.svg" alt="">
+                            </div>
+                            <p class="dropdown__desc">Ширина доски</p>
+                            <p class="dropdown__units">от 2,5 м</p>
+                          </li>
+                          <li class="dropdownlist__item">
+                            <div class="dropdown__icon">
+                              <img src="./img/SVG/length.svg" alt="">
+                            </div>
+                            <p class="dropdown__desc">Толщина</p>
+                            <p class="dropdown__units">от 2,5 м</p>
+                          </li>
+                          <li class="dropdownlist__item">
+                            <div class="dropdown__icon">
+                              <img src="./img/SVG/length.svg" alt="">
+                            </div>
+                            <p class="dropdown__desc">Срок службы</p>
+                            <p class="dropdown__units">от 2,5 м</p>
+                          </li>
+                          <li class="dropdownlist__item">
+                            <div class="dropdown__icon">
+                              <img src="./img/SVG/length.svg" alt="">
+                            </div>
+                            <p class="dropdown__desc">Срок службы</p>
+                            <p class="dropdown__units">от 2,5 м</p>
+                          </li>
+                        </ul> -->
+                      </div>
+  
+                      <h2 class="slider__title">Лонгборд 2.0</h2>
+                      <p class="slider__item-desc">Устойчивая доска для новичков. На них легко лежать, сидеть, грести, разгребаться на волны и ехать. Размер и плавучесть доски позволяет брать очень маленькие и пологие волны и не спеша, не прилагая особых усилий ехать по ним.
+                      </p>
+  
+                      <div class="board__feature">
+                        <div class="feature__item">
+                          <h4 class="feature__title">Длина доски</h4>
+                          <p class="feature__desc">от 2,5 метров</p>
+                        </div>
+                        <div class="feature__item">
+                          <h4 class="feature__title">Ширина доски</h4>
+                          <p class="feature__desc">от 40 сантиметров</p>
+                        </div>
+                      </div>
+  
+                      <div class="board__order">
+                        <h3 class="board__price">7000 ₽</h3>
+                        <a href="#" class="btn btn--theme-yellow">ЗАКАЗАТЬ</a>
+                      </div>
+                      
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="arrow__right">
+                <a href="#" id="left" class="arrow__link">
+                  <img class="arrow__img" src="./img/SVG/arrowright.svg" alt="">
+                </a>
+              </div>
+              
             </div>
         </section>
 
