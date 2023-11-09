@@ -1,0 +1,20 @@
+$containerWidth:940px;
+$baseFontSize:18px;
+
+$tablets: 768px;
+$phones: 480px;
+
+
+@import './media';
+@import './base';
+@import './normalize';
+@import './hamburger';
+@import './header';
+@import './features';
+@import './btns';
+@import './hero';
+@import './benefit';
+@import './rewievs';
+@import './order__form';
+@import './fixed-menu';
+ 

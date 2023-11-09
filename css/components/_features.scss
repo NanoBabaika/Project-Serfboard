@@ -1,0 +1,27 @@
+
+
+.features {
+    display: flex;
+}
+
+.features__item {
+    margin-right: rem(46px);
+    display: flex;
+    align-items: center;
+
+    
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+
+.feature__icon {
+    width: rem(45px);
+    margin-right: rem(7px);
+}
+
+.feature__text {
+    font-size: rem(16px);
+    min-width: rem(85px);
+}

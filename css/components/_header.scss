@@ -1,0 +1,100 @@
+.hero {
+    background: url(../../img/bgtopDark.png) center top no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-height: rem(650px);
+    color: #fff;
+
+
+    @include tablets {
+        background-image: url(../../img/bg768px.png);
+        background-position: center;
+    }
+}
+
+.header {
+    margin-top: rem(32px);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include tablets {
+        background: #1968B1;
+        background-size: 100%, 100%;
+        padding: 26px 36px 25.736px 30px;
+        align-items: center;
+
+     }
+}
+
+.menu {
+    margin: 0 30px;
+    padding-top: rem(5px);
+
+    @include tablets{
+        display: none;
+    }
+}
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu__item {
+    margin-top: rem(10px);
+    margin-right: rem(15px);
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.menu__link {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.phone__box {
+    display: flex;
+}
+
+
+.phone__numer-desc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.phone__numer-icon {
+    width: rem(12px);
+    height: rem(12px);
+    margin-right: rem(6px);
+    flex-shrink: 0;
+}
+
+
+.phone__numer {
+    font-size: rem(24px);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.phone__numer-text {
+    text-decoration: none;
+}
+
+.phone  {
+   
+    @include tablets {
+        display: none;
+    }
+}
+ 

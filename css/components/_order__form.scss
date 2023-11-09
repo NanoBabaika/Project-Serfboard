@@ -1,0 +1,162 @@
+.order__section {
+    background: url(../../img/bgordersdark.png) no-repeat;
+    background-size: cover;
+    display: block;
+    position: relative;
+        
+}
+
+
+
+.section__title-orders {
+    color: var(--white, #FFF);
+    margin-top: rem(62px);
+}
+
+.form {
+    display: flex;
+    
+    @include tablets {
+        padding: 0 19%;
+        flex-direction: column;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__col {
+   flex: 1; 
+   margin-right: rem(20px);
+   width: rem(450px);
+   padding: 0 rem(20px);
+
+   &:last-child {
+       margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+
+.form__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(18px);
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child .form__input3{
+        margin-right: 0;
+    }
+}
+
+
+.form__input {
+    width: 100%;
+    border: none;
+    padding: rem(18px) rem(11px);
+    border-radius: rem(4px);
+    border: solid rem(3px) transparent;
+
+    &:focus {
+        border-color: #FEDB3F;
+        outline: none;
+    }
+}
+ 
+
+.form__input-textarea {
+    height: rem(142px);
+    resize: none;
+}
+
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(36px);
+
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+
+
+
+.radio {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+
+    @include phones {
+        margin-bottom: rem(10px);
+    }
+
+    &--checkbox {
+        .radio__visible {
+            border-radius: 0;
+
+            &::before{
+                background: url(../../img/checkMarkIcon.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}
+
+
+.radio__elem {
+    display: none;
+
+    &:checked ~ .radio__visible {
+        &::before {
+            display: block;
+        }
+    }
+}
+
+
+.radio__visible {
+    width: rem(26px);
+    height: rem(26px);
+    position: relative;
+    border-radius: 50%;
+    background: #FFF;
+    margin-right: rem(12px);
+
+
+    &::before{
+        content: "";
+        width: rem(14px);
+        height: rem(14px);
+        background: Yellow;
+        border-radius: 50%;
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.form__btns {
+    margin-top: rem(44px);
+    display: flex;
+    justify-content: center;
+}
+
+
+.radio__title {
+    margin-right: rem(12px);
+}

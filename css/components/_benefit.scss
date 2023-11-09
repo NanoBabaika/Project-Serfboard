@@ -1,0 +1,117 @@
+.headline__title {
+    margin-bottom: rem(25px);
+}
+
+.headline__subtitle {
+
+    @include phones  {
+        padding: 0 2%;
+    }
+}
+
+.benefits {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+        text-align: left;
+      }
+
+}
+
+.benefits__item {
+    flex: 1;
+    padding: 0 3%;
+    position: relative;
+
+    @include phones {
+         padding: 0;
+         margin-bottom: 19px;
+      }
+
+    &::before {
+        content: url(../../img/Combinedshapeicon.svg);
+        position: absolute;
+        top: rem(50px);
+        right: 0;
+        transform: translateX(50%);
+    }
+
+    @include tablets {
+        &::before {
+            display: none;
+        }
+    }
+
+    &:first-child{
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+
+        &::before{
+            display: none;
+        }
+    }
+}
+
+
+.benefit {
+    text-align: center;
+
+    @include phones {
+        display: flex;
+    }
+}
+
+
+.benefit__image-wrapper {
+    display: inline-block;
+    width: rem(126px);
+    height: rem(126px);
+    position: relative;
+    background: #e6e9e7;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include phones  {
+       width: 70%;
+    }
+    
+}
+
+.benefit__icon {
+   width: rem(75px);
+   height: rem(69px);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); 
+
+   @include phones {
+    margin-right: rem(19px);
+   }
+    
+}
+
+
+.benefit__title {
+    color: var(--black, #292929);
+    font-family: Alegreya Sans;
+    font-size: rem(27px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: rem(20px);
+  }
+  
+  .benefit__desc {
+    color: var(--body, #666);
+    text-align: center;
+    font-size: rem(18px);
+    font-style: normal;
+
+   
+  }
+ 
