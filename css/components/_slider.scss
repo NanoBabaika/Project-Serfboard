@@ -1,6 +1,7 @@
 .slider__container {
     display: flex;
     align-items: center;
+
 }
 
 
@@ -8,31 +9,55 @@
 .slider__section {
  background-color: #F8FAF9;
 }
-
+ 
 .slider__item {
     margin-top: rem(53px);
     height: rem(535px);
     display: flex;
     flex-direction: row;
     justify-content: center;
+ 
+    
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
 
 .slider_item-leftside {
     margin-right: rem(68px);
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
- .lider__img {
+ .slider__img {
      display: block;
  }
 
  
- .sliderbg {
-     position: relative;
-     top: -340px;
-     right: 63px;
-     z-index: -1;
- }
+//  .sliderbg {
+//      position: relative;
+//      top: -340px;
+//      right: 63px;
+//      z-index: -1;
+//  }
 
+
+.slider_item-rigthside {
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 75%;
+    }
+}
 
 .parameters__menu__btn {
     display: flex;
@@ -51,6 +76,10 @@
     color: #FFF;
     cursor: pointer;
     margin-bottom: rem(52px);
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .slider__title {
@@ -69,6 +98,10 @@
     font-weight: 400;
     line-height: normal;
     color: #666;
+
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .board__feature {
@@ -101,6 +134,10 @@
 
 .board__order {
     display: flex;
+
+    @include phones{
+    
+        }
 }
 
 .board__price {

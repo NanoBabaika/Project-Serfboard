@@ -1226,20 +1226,60 @@ template {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .slider__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .slider_item-leftside {
   margin-right: 3.7777777778rem;
 }
+@media screen and (max-width: 768px) {
+  .slider_item-leftside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
-.lider__img {
+.slider__img {
   display: block;
 }
 
-.sliderbg {
-  position: relative;
-  top: -340px;
-  right: 63px;
-  z-index: -1;
+@media screen and (max-width: 768px) {
+  .slider_item-rigthside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 75%;
+  }
 }
 
 .parameters__menu__btn {
@@ -1276,6 +1316,11 @@ template {
   cursor: pointer;
   margin-bottom: 2.8888888889rem;
 }
+@media screen and (max-width: 768px) {
+  .menu__btn {
+    display: none;
+  }
+}
 
 .slider__title {
   font-size: 2rem;
@@ -1293,6 +1338,11 @@ template {
   font-weight: 400;
   line-height: normal;
   color: #666;
+}
+@media screen and (max-width: 768px) {
+  .slider__item-desc {
+    text-align: center;
+  }
 }
 
 .board__feature {
@@ -1330,7 +1380,6 @@ template {
   display: -ms-flexbox;
   display: flex;
 }
-
 .board__price {
   color: #151515;
   font-size: 3.3333333333rem;
