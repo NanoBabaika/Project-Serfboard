@@ -4,9 +4,19 @@
     flex-direction: column;
     justify-content: space-between;
     display: none;
-
+    
+    
     @include tablets {
         display: inline-flex;
+        position: fixed;
+        left: rem(650px);
+        top: rem(65px);
+    }
+
+    @include phones {
+        position: fixed;
+        left: 23.888889rem;
+        top: 3.611111rem;
     }
 }
 

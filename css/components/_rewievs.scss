@@ -36,6 +36,10 @@
 .rewievs__content {
     flex: 1;
     margin-left: rem(20px);
+
+    @include phones {
+        margin-left: 0;
+    }
 }
 
 .rewievs__title {
