@@ -41,12 +41,7 @@
  }
 
  
-//  .sliderbg {
-//      position: relative;
-//      top: -340px;
-//      right: 63px;
-//      z-index: -1;
-//  }
+ 
 
 
 .slider_item-rigthside {
@@ -134,6 +129,7 @@
 
 .board__order {
     display: flex;
+    align-items: center;
 
     @include phones{
     
@@ -148,4 +144,38 @@
     line-height: rem(60px);  
     text-transform: uppercase;
     margin-right: 28px;
+}
+
+// настройки bxslider
+
+.slider {
+    position: relative;
+
+    .bx-wrapper {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+
+.slider__block {
+    display: flex;
+    flex-direction: row;
+}
+
+.slider__arrows {
+    display: block;
+}
+
+.arrow__left {
+    position: relative;
+    top: 285px;
+    right: 0;
+}
+
+.arrow__right {
+    position: relative;
+    top: rem(240px);
+    right: -965px;
 }

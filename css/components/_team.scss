@@ -1,0 +1,67 @@
+
+
+.team-list.team--version--desktop{
+    display: flex;
+    flex-direction: row;
+}
+
+.team_item {
+    margin-right: rem(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+ 
+.member__photo {
+    margin-bottom: rem(21px);
+}
+
+ 
+.team__title {
+    color: var(--black, #292929);
+    font-size: rem(21px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+
+     width: rem(220px);
+     display: inline-flex;
+     background: transparent;
+     border: none ;
+     cursor: pointer;
+}
+
+.title__triangle {
+    position: relative;
+    right: -12px;
+    top: 8px;
+}
+
+
+.content__profession {
+    color: #292929;
+    text-align: center;
+    font-size: rem(18px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.content__desc{
+    color: #666;
+    text-align: center;
+    font-size: rem(18px);
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.team__content {
+    overflow: hidden;
+    transition: height .3s;
+    height: 0;
+}
