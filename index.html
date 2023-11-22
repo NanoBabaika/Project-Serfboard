@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="/path/to/jquery.bxslider.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap"
@@ -699,7 +700,7 @@
                    <!-- строка4 -->
                    <div class="form__row">
                     <div class="form__btns">
-                      <input type="submit" value="Заказать" class="btn btn--theme-yellow ">
+                      <input type="submit" id="submit" value="Заказать" class="btn btn--theme-yellow ">
                       <input type="reset" value="Очистить" class="btn btn--theme-transparent">
                     </div>
                    </div>
@@ -752,12 +753,22 @@
       <span class="hamburger__plank"></span>
       <span class="hamburger__plank"></span>
      </a>
+     <div id="modal" class="modal">
+       <div class="modal__container">
+         <div class="modal__content">Cообщение отправлено</div>
+         <div class="modal__button-container">
+           <a href="#" class="btn btn--theme-yellow"></a>
+         </div>
+       </div>
+     </div>
+    
      <script src="./jquery.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
      <script src="./burger.js" ></script>
     <script src="./slider.js" ></script>
     <script src="./tabs.js"></script>
     <script src="./acco.js"></script>
-
+    <script src="./modal.js"></script>
   </body>
 </html>
