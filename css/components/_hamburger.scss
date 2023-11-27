@@ -9,13 +9,13 @@
     @include tablets {
         display: inline-flex;
         position: fixed;
-        left: rem(650px);
+        right: rem(50px);
         top: rem(65px);
     }
 
     @include phones {
         position: fixed;
-        left: 23.888889rem;
+        right: rem(50px);
         top: 3.611111rem;
     }
 }

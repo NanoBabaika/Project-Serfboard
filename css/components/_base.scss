@@ -61,10 +61,16 @@ address {
 .wrapper{
  position: relative;
  width: 100%;
- min-height: 100%; 
- overflow: hidden;
+ height: 100%; 
+//  overflow: hidden;
 }
 
+
+.maincontent {
+  height: 100%;
+  // transition: transform 1s;
+  // will-change: transform;
+}
 
 .container {
   width: 95%;

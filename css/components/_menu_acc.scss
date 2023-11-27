@@ -1,0 +1,61 @@
+.products__menu-section {
+    background: url(../../img/accsectionBG.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+ 
+}
+
+ 
+
+.products__menu-section-title {
+    color: #fff;
+    position: relative;
+    top: -260px;
+    left: -500px;
+}
+
+.products__menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.products__menu-item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.products__menu-title {
+    position: relative;
+    width: 100px;
+    top: 388px;     
+
+}
+
+.products__menu-desc {
+    font-family: Alegreya Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transform: rotate(-90deg);
+}
+
+.products__menu-content {
+    background: rgba(47, 50, 52, 0.9);
+    width: 0;
+    position: relative;
+    overflow: hidden;
+    transition: .7s;
+}
+
+.products__menu-container {
+    padding: 40px 73px 45px 26px;
+    
+
+}
