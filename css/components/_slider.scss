@@ -179,3 +179,36 @@
     top: rem(240px);
     right: -965px;
 }
+
+// Выпадашка
+.parameters__menu{
+    position: relative;
+
+}
+
+.disp {
+    display: none;
+    }
+
+.dropdownlist {
+   position: absolute;
+   top: 0;
+   left: 235%;
+
+ 
+}
+
+.dropdownlist__item{
+    height: 44px;
+    width: 246px;
+    background-color: rgb(207, 206, 206);
+    box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    padding: 18px 18px 14px 14px;
+    align-items: center;
+}
+
+.dropdown__icon {
+    margin-right: 14px;
+}

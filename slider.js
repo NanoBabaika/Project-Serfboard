@@ -15,3 +15,18 @@ $(".arrow__link-right").click(e => {
     e.preventDefault();
     slider.goToNextSlide();
 })
+
+
+
+// действие выпадашки
+
+const parametersBtn = document.querySelector(".menu__btn");
+const parametersMenu = document.querySelector(".dropdownlist");
+
+parametersBtn.addEventListener('click', () => {
+    if(parametersMenu.classList.contains('disp') == true){
+        parametersMenu.classList.remove('disp');
+    } else {
+        parametersMenu.classList.add('disp')
+    }
+})

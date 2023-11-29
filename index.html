@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/components/main.css" />
     <title>Poroject Selfboard</title>
   </head>
-  <body>
+  <body class="body--active-menu">
     <div class="wrapper">
       <div class="maincontent">
 
@@ -185,48 +185,50 @@
                     <div class="slider_item-rigthside">
   
                       <div class="parameters__menu ">
-                        <div class="parameters__menu__btn">
+
                           <button class="menu__btn">параметры
                             <img src="./img/SVG/parametersicon.svg" alt="" class="parameters__icon">
                           </button>
-                        </div>
-                        <!-- <ul class="dropdownlist">
-                          <li class="dropdownlist__item">
-                            <div class="dropdown__icon">
-                              <img src="./img/SVG/length.svg" alt="">
-                            </div>
-                            <p class="dropdown__desc">Длина доски</p>
-                            <p class="dropdown__units">от 2,5 м</p>
-                          </li>
-                          <li class="dropdownlist__item">
-                            <div class="dropdown__icon">
-                              <img src="./img/SVG/length.svg" alt="">
-                            </div>
-                            <p class="dropdown__desc">Ширина доски</p>
-                            <p class="dropdown__units">от 2,5 м</p>
-                          </li>
-                          <li class="dropdownlist__item">
-                            <div class="dropdown__icon">
-                              <img src="./img/SVG/length.svg" alt="">
-                            </div>
-                            <p class="dropdown__desc">Толщина</p>
-                            <p class="dropdown__units">от 2,5 м</p>
-                          </li>
-                          <li class="dropdownlist__item">
-                            <div class="dropdown__icon">
-                              <img src="./img/SVG/length.svg" alt="">
-                            </div>
-                            <p class="dropdown__desc">Срок службы</p>
-                            <p class="dropdown__units">от 2,5 м</p>
-                          </li>
-                          <li class="dropdownlist__item">
-                            <div class="dropdown__icon">
-                              <img src="./img/SVG/length.svg" alt="">
-                            </div>
-                            <p class="dropdown__desc">Срок службы</p>
-                            <p class="dropdown__units">от 2,5 м</p>
-                          </li>
-                        </ul> -->
+                          
+                          <ul  class="dropdownlist disp">
+                            <li class="dropdownlist__item">
+                              <div class="dropdown__icon">
+                                <img src="./img/SVG/length.svg" alt="">
+                              </div>
+                              <p class="dropdown__desc">Длина доски</p>
+                              <p class="dropdown__units">от 2,5 м</p>
+                            </li>
+                            <li class="dropdownlist__item">
+                              <div class="dropdown__icon">
+                                <img src="./img/SVG/parameterswidth.svg" alt="">
+                              </div>
+                              <p class="dropdown__desc">Ширина доски</p>
+                              <p class="dropdown__units">от 2,5 м</p>
+                            </li>
+                            <li class="dropdownlist__item">
+                              <div class="dropdown__icon">
+                                <img src="./img/SVG/parametersheight.svg" alt="">
+                              </div>
+                              <p class="dropdown__desc">Толщина</p>
+                              <p class="dropdown__units">от 2,5 м</p>
+                            </li>
+                            <li class="dropdownlist__item">
+                              <div class="dropdown__icon">
+                                <img src="./img/SVG/parameterslifetime.svg" alt="">
+                              </div>
+                              <p class="dropdown__desc">Срок службы</p>
+                              <p class="dropdown__units">от 2,5 м</p>
+                            </li>
+                            <li class="dropdownlist__item">
+                              <div class="dropdown__icon">
+                                <img src="./img/SVG/parametersweigth.svg" alt="">
+                              </div>
+                              <p class="dropdown__desc">Срок службы</p>
+                              <p class="dropdown__units">от 2,5 м</p>
+                            </li>
+                          </ul>
+
+
                       </div>
   
                       <h2 class="slider__title">Лонгборд 2.0</h2>
@@ -266,7 +268,7 @@
                             <img src="./img/SVG/parametersicon.svg" alt="" class="parameters__icon">
                           </button>
                         </div>
-                        <!-- <ul class="dropdownlist">
+                        <ul class="dropdownlist disp">
                           <li class="dropdownlist__item">
                             <div class="dropdown__icon">
                               <img src="./img/SVG/length.svg" alt="">
@@ -302,7 +304,7 @@
                             <p class="dropdown__desc">Срок службы</p>
                             <p class="dropdown__units">от 2,5 м</p>
                           </li>
-                        </ul> -->
+                        </ul>
                       </div>
   
                       <h2 class="slider__title">Лонгборд 2.0</h2>
@@ -342,7 +344,7 @@
                             <img src="./img/SVG/parametersicon.svg" alt="" class="parameters__icon">
                           </button>
                         </div>
-                        <!-- <ul class="dropdownlist">
+                        <ul class="dropdownlist disp">
                           <li class="dropdownlist__item">
                             <div class="dropdown__icon">
                               <img src="./img/SVG/length.svg" alt="">
@@ -378,7 +380,7 @@
                             <p class="dropdown__desc">Срок службы</p>
                             <p class="dropdown__units">от 2,5 м</p>
                           </li>
-                        </ul> -->
+                        </ul>
                       </div>
   
                       <h2 class="slider__title">Лонгборд 2.0</h2>
@@ -859,11 +861,45 @@
       </ul>
        
     </nav>
-    <a href="#" class="hamburger">
+
+    <!-- Бургер и орверлей -->
+    <div id="burger" class="hamburger">
       <span class="hamburger__plank"></span>
       <span class="hamburger__plank"></span>
       <span class="hamburger__plank"></span>
-     </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div id="overlay__menu" class="overlay__menu">
+         <div class="menu">
+          <ul class="menu__list-overlay">
+            <li class="menu__item">
+              <a href="#" class="menu__link">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Серфборды</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Команда</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Меню</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Отзывы</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Как мы работаем</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+         </div>
+      </div>
+    </div>
+
+     <!-- модальное окно/отправка формы -->
      <div id="modal" class="modal">
        <div class="modal__container">
          <div class="modal__content">Cообщение отправлено</div>
@@ -877,7 +913,7 @@
      <script src="https://www.youtube.com/iframe_api"></script>
      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-     <script src="./OPS.js"></script>
+     <!-- <script src="./OPS.js"></script> -->
      <script src="./player.js"></script>
      <script src="./productsmenu.js"></script>
      <script src="./acco.js"></script>
