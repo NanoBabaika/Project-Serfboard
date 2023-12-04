@@ -1,42 +1,97 @@
+const validateForm = (form, fieldsArray) => {
 
-// $(".form").submit(e => {
-//     e.preventDefault();
+    fieldsArray.forEach((field) =>{
+        field.removeClass("input-error");
+        if(field.val().trim() === "") {
+            field.addClass("input-error");
+        }
+    });    
 
-//     $.fancybox.open({
-// 		src: '#modal',
-// 		type: 'inline'
-// 	});
-// });
+    const errorFields = form.find(".input-error");
 
-// $(".app-submit-btn").click(e => {
-//     e.preventDefault();
-
-//     $.fancybox.close();
-// })
+    return errorFields.length === 0;
+}
 
 
+$('.form').submit(e => {
+    e.preventDefault();
 
-// Запрос на JS
+    const form = $(e.currentTarget);
+    const name = form.find("[name ='name']");
+    const phone = form.find("[name ='phone']");
+    const comment = form.find("[name ='comment']");
+    const to = form.find("[name ='to']");
+
+    const modal = $("#modal");
+    const content = $(".modal__content");
+
+    modal.removeClass("error-modal");
+
+    const isValid = validateFields(form, [name, phone, comment, to]);
+
+    if(isValid) {
+     const request = $.ajax({
+            url:"https://webdev-api.loftschool.com/sendmail",
+            method:"post",
+    
+            data: {
+                name:name.val(),
+                phone:phone.val(),
+                comment:comment.val(),
+                to:to.val(),
+            },
+
+
+        });
+
+        request.done((data) => {
+            content.text(data.massage);
+        });
+
+        request.fail((data) =>{
+            const message = data.resposeJSON.message;
+            content.text(message);
+            modal.addClass("error-modal");
+        });
+
+        request.always((data) => {
+            $.fancybox.open({
+                src: '#modal',
+                type: 'inline',
+            }); 
+        })
+    }
+     
+});
+
+
+
+$(".app-submit-btn").click(e => {
+    e.preventDefault();
+
+    $.fancybox.close();
+})
+
 
 
 // Открытие модального окна
-var modal = document.getElementById('modal');
-var btn = document.getElementById("ordersbtn");
-var span = document.getElementsByClassName("app-submit-btn")[0];
+// var modal = document.getElementById('modal');
+// var btn = document.getElementById("ordersbtn");
+// var span = document.getElementsByClassName("app-submit-btn")[0];
 
-btn.onclick = function (){
-    modal.style.display = "block";
-    return false;
-}
+// btn.onclick = function (){
+//     modal.style.display = "block";
+//     return false;
+// }
 
-span.onclick = function (){
+// span.onclick = function (){
     
-    modal.style.display = "none";
-}
+//     modal.style.display = "none";
+// }
 
 
-window.onclick =function (event) {
- if(event.target == modal) {
-     modal.style.display = "none";
- }
-}
+// window.onclick =function (event) {
+//  if(event.target == modal) {
+//      modal.style.display = "none";
+//  }
+// }
