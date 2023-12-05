@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/components/main.css" />
     <title>Poroject Selfboard</title>
   </head>
-  <body class="body--active-menu">
+  <body class="body">
     <div class="wrapper">
       <div class="maincontent">
 
@@ -424,7 +424,7 @@
                 </div>
                 <button class="team__title" type="button">  
                   Борис Федорович
-                  <img class="title__triangle" src="./img/SVG/triangledown.svg" alt="">
+                  <img class="title__triangle" src="./img/SVG/triangleup.svg" alt="">
                 </button>
                 <div class="team__content">
                   <div class="team__content__block">
@@ -439,7 +439,7 @@
                   <img  src="./img/teammember2.png" alt="" class="member__photo">
                 </div>
                 <button class="team__title" type="button"> Ольга Невзорова
-                  <img class="title__triangle" src="./img/SVG/triangledown.svg" alt="">
+                  <img class="title__triangle" src="./img/SVG/triangleup.svg" alt="">
                 </button>
                 <div class="team__content">
                   <div class="team__content__block">
@@ -454,7 +454,7 @@
                   <img src="./img/teammember3.png" alt="" class="member__photo">
                 </div>
                 <button class="team__title" type="button"> Ингвар Нильсон
-                  <img class="title__triangle" src="./img/SVG/triangledown.svg" alt="">
+                  <img class="title__triangle" src="./img/SVG/triangleup.svg"  alt="">
                 </button>
                 <div class="team__content">
                   <div class="team__content__block">
@@ -469,7 +469,7 @@
                   <img src="./img/Team_photo4.png" alt="" class="member__photo">
                 </div>
                 <button class="team__title" type="button"> Екатерина Иванова
-                  <img class="title__triangle" src="./img/SVG/triangledown.svg" alt="">
+                  <img class="title__triangle" src="./img/SVG/triangleup.svg"  alt="">
                 </button>
                 <div class="team__content">
                   <div class="team__content__block">
@@ -483,11 +483,11 @@
 
 
             <!-- Мобильная версия аккордеона -->
-            <ul class="team-list team__list-mobile">
+            <ul class="team-list  team__list-mobile">
               <!-- карточка1 -->
-              <li class="team_item">
+              <li class="team__item">
                 <button class="team__title" type="button">Борис Федорович
-                  <img class="title__triangle" src="./img/SVG/triangledown.svg" alt="">
+                  <img class="title__triangle" src="./img/SVG/triangleup.svg"  alt="">
                 </button>
                 <div class="team__content">
                   <div class="team__content__block">
@@ -500,7 +500,7 @@
                 </div>
               </li>
                 <!-- карточка1 -->
-              <li class="team_item">
+              <li class="team__item">
                 <button class="team__title" type="button">Ольга Невзорова
                   <img class="title__triangle" src="./img/SVG/triangledown.svg" alt="">
                 </button>
@@ -515,7 +515,7 @@
                 </div>
               </li>
                 <!-- карточка1 -->
-              <li class="team_item">
+              <li class="team__item">
                 <button class="team__title" type="button">Ингвар Нильсон
                   <img class="title__triangle" src="./img/SVG/triangledown.svg" alt="">
                 </button>
@@ -530,7 +530,7 @@
                 </div>
               </li>
                 <!-- карточка1 -->
-              <li class="team_item">
+              <li class="team__item">
                 <button class="team__title" type="button"> Екатерина Иванова
                   <img class="title__triangle" src="./img/SVG/triangledown.svg" alt="">
                 </button>
@@ -721,18 +721,19 @@
         <section class="section order__section">
             <div class="container">
             <h2 class="section__title section__title-orders">закажите доску</h2>
-             <form class="form">
+             <form class="form" autocomplete="off">
+               <input type="hidden" name="to" value="somwere@mail.com">
                <div class="form__col">
                 <!-- строка1 -->
                   <div class="form__row">
                     <label class="form__block ">
                       <div class="form__title">Имя</div>
-                      <input type="text" class="form__input form__input1">
+                      <input name="name" type="text" class="form__input form__input1">
                     </label>
  
                     <label class="form__block ">
                       <div class="form__title">Телефон</div>
-                      <input type="text" class="form__input form__input2">
+                      <input name="phone" type="text" class="form__input form__input2">
                     </label>
  
                   </div>    
@@ -741,7 +742,7 @@
                     <div class="form__row">
                       <label class="form__block">
                         <div class="form__title">Улица</div>
-                        <input type="text" class="form__input form__input3">
+                        <input name="street" type="text" class="form__input form__input3">
                     </label>
                     </div>
 
@@ -749,12 +750,12 @@
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__title">Дом</div>
-                      <input type="text" class="form__input">
+                      <input name="home" type="text" class="form__input">
                     </label>
 
                      <label class="form__block">
                       <div class="form__title">Корпус</div>
-                      <input type="text" class="form__input">
+                      <input name="part" type="text" class="form__input">
                     </label>
 
                      <label class="form__block">
@@ -873,25 +874,25 @@
       <div id="overlay__menu" class="overlay__menu">
          <div class="menu">
           <ul class="menu__list-overlay">
-            <li class="menu__item">
+            <li class="menu__item menu__item-overlay">
               <a href="#" class="menu__link">О нас</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item-overlay">
               <a href="#" class="menu__link">Серфборды</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item-overlay">
               <a href="#" class="menu__link">Команда</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item-overlay">
               <a href="#" class="menu__link">Меню</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item-overlay">
               <a href="#" class="menu__link">Отзывы</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item-overlay">
               <a href="#" class="menu__link">Как мы работаем</a>
             </li>
-            <li class="menu__item">
+            <li class="menu__item menu__item-overlay">
               <a href="#" class="menu__link">Контакты</a>
             </li>
           </ul>
@@ -910,12 +911,12 @@
      </div>
     
      <script src="./jquery.js"></script>
-     <script src="https://www.youtube.com/iframe_api"></script>
+     <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
      <!-- <script src="./OPS.js"></script> -->
-     <script src="./player.js"></script>
-     <script src="./productsmenu.js"></script>
+     <!-- <script src="./player.js"></script> -->
+     <!-- <script src="./productsmenu.js"></script> -->
      <script src="./acco.js"></script>
      <script src="./modal.js"></script>
      <script src="./burger.js" ></script>

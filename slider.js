@@ -16,6 +16,8 @@ $(".arrow__link-right").click(e => {
     slider.goToNextSlide();
 })
 
+adaptiveHeight= true;
+// responsive = true;
 
 
 // действие выпадашки

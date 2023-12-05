@@ -57,9 +57,13 @@
     height: 100%;
     z-index: 10;
   }
+
+  .overlay .menu{
+    display:block
+  } 
   
   .menu{
-    &__item{
+    &menu__item-overlay{
       margin-bottom:20px;
       display:flex;
       flex-direction:column;

@@ -2,7 +2,7 @@ const messureWidth = () => {
     return 500;
 }
 
-const openItem = item => {
+const openprodItem = item => {
     const hiddenContent = item.find(".products__menu-content");
     const reqWidth = messureWidth();
 }

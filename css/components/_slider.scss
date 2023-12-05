@@ -23,6 +23,8 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        width: 500px;
+        height: 745px;
     }
 }
 
@@ -162,6 +164,12 @@
 .slider__block {
     display: flex;
     flex-direction: row;
+     
+
+    @include tablets {
+       width: 520px;
+       height: 312px;
+    }
 }
 
 .slider__arrows {
@@ -174,17 +182,34 @@
     right: 0;
 }
 
+
+
 .arrow__right {
     position: relative;
     top: rem(240px);
     right: -965px;
+
+
+    @include tablets {
+        right: -500px;
+        top: 80%;
+     }
 }
 
 // Выпадашка
 .parameters__menu{
     position: relative;
+    display: inline-block;
 
 }
+
+.parameters__menu__btn:hover ~ .dropdownlist.disp{
+    display:block
+}
+
+.slider__section .bx-viewport{height:auto !important}
+
+
 
 .disp {
     display: none;
@@ -193,7 +218,7 @@
 .dropdownlist {
    position: absolute;
    top: 0;
-   left: 235%;
+   left: 100%;
 
  
 }
