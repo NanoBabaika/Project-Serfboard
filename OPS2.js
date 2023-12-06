@@ -8,7 +8,7 @@ const dataScrollto = document.querySelectorAll('[data-scroll-to]');
 let inScroll = false;
 
 addNavigation();
-whell(); 
+wheel(); 
 keyPush();
 
 
@@ -55,8 +55,8 @@ function addNavigation () {
 
 // Функция работы с колесиком мыши
 
-function whell(){
-  document.addEventListener('wheell', e => {
+function wheel(){
+  document.addEventListener('wheel', e => {
     const direct = e.deltaY > 0 ? 'up' : 'down';
 
     scrollToPage(direct);
