@@ -68,10 +68,12 @@ address {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .maincontent {
   height: 100%;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .container {
@@ -1357,7 +1359,7 @@ template {
 }
 
 .fixed__menu-item--active .fixed__menu-link {
-  border-color: #fff;
+  border-color: #FEDB3F;
 }
 
 .fixed__menu-link {
@@ -1374,12 +1376,15 @@ template {
   width: 0.3333333333rem;
   height: 0.3333333333rem;
   border-radius: 50%;
-  background: #fff;
+  background: #FEDB3F;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+.fixed__menu-link:hover {
+  border-color: #FEDB3F;
 }
 
 .slider__container {
@@ -1389,6 +1394,20 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .slider__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .slider__section {
@@ -1613,6 +1632,12 @@ template {
   top: 285px;
   right: 0;
 }
+@media screen and (max-width: 768px) {
+  .arrow__left {
+    top: 92%;
+    right: 150%;
+  }
+}
 
 .arrow__right {
   position: relative;
@@ -1621,7 +1646,7 @@ template {
 }
 @media screen and (max-width: 768px) {
   .arrow__right {
-    right: -500px;
+    right: -2180%;
     top: 80%;
   }
 }
@@ -1729,8 +1754,8 @@ template {
   cursor: pointer;
 }
 
-.team__title.active {
-  content: url(./../../img/SVG/triangledown.svg);
+.title__triangle {
+  content: "../../img/SVG/triangledown.svg";
 }
 
 .title__triangle {
@@ -1795,6 +1820,11 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.team__item.active .title__triangle {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .products__menu-section {

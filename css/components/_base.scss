@@ -68,14 +68,14 @@ address {
  position: relative;
  width: 100%;
  height: 100%; 
-//  overflow: hidden;
+ overflow: hidden;
 }
 
 
 .maincontent {
   height: 100%;
-  // transition: transform 1s;
-  // will-change: transform;
+  transition: transform 1s, 
+  -webkit-transform 1s;
 }
 
 .container {

@@ -44,19 +44,18 @@
      background: transparent;
      border: none ;
      cursor: pointer;
-
 }
 
-.team__title.active {
-    content:url(./../../img/SVG/triangledown.svg);
-    content: box 8px;
-}
+
+
+    .title__triangle{
+        content: '../../img/SVG/triangledown.svg';
+    }
 
 .title__triangle {
     position: relative;
     right: -12px;
     top: 8px;
- 
 }
 
 
@@ -107,5 +106,6 @@
     align-items: center;
 }
 
-
-
+.team__item.active .title__triangle{
+    transform:rotate(180deg);
+}

@@ -10,7 +10,7 @@ const openItem = item => {
 
 const closeEveryItem = container => {
     const items = container.find('.team__content');
-    const itemContainer = container.find(".team_item");
+    const itemContainer = container.find(".team__item");
 
     itemContainer.removeClass("active");
     items.height(0);
@@ -33,9 +33,5 @@ $('.team__title').click(e => {
 })
 
 
-// Замена треугольника по клику
- 
 
-$('.team__title').on('click', function(){
-    $(this).toggleClass('active');
-  });
+ 
