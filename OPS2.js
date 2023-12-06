@@ -69,10 +69,10 @@ function keyPush(){
   document.addEventListener('keydown', e => {
     switch(e.keyCode) {
       case 40:
-        scrolltoPage('up');
+        scrollToPage('up');
         break;
       case 38:
-        scrolltoPage('down');
+        scrollToPage('down');
         break;
       default:
         break;
