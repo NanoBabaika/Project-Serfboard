@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', e => {
 
   // Находим кнопки и вешаем цикл и обработчик на каждую
   let playButtons = document.querySelectorAll('.play');
-  for(let i=0; i < playButtons.length; i++) {
+  for (let i = 0; i < playButtons.length; i++); {
     playButtons[i].addEventListener('click', playStop);
   } 
 
   // обработчик события на кнопку динамика
   let micControl = document.getElementById('micLevel');
-  micControl.addEventListener('click, soundOf');
+  micControl.addEventListener('click', soundOf);
 
   // обработчик события для ползунка продолжительности видео
   durationControl = document.getElementById('durationLevel');
@@ -43,18 +43,21 @@ document.addEventListener('DOMContentLoaded', e => {
 function playStop(){
   // находим кнопку с картинкой плей и скрываем ее
   let playImg = document.querySelector('.video__play');
-  playImg.classList.toggle('.video__play--active');
+  playImg.classList.toggle('video__play--active');
 
   // присваиваем ползунку продолжительности максимальное значение равное продолжительности видео
   durationControl.max = video.duration;
 
   // проверяем стоит ли видео на паузе, если да продолжаем воспроизведение
   if(video.paused){
+    // запуск
     video.play();
-    intervalId = setInterval(updateDuration, 1000/66);
+    // обновляем ползунок каждые 15 милисекунд
+    intervalId = setInterval(updateDuraton, 1000 / 66);
   } else {
+    // видео не стоит на паузе , значит ставим на паузу
     video.pause();
-    clearInterval(intervalId)
+    clearInterval(intervalId);
   }
 
 }
