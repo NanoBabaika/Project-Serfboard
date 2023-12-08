@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
   // Находим кнопки и вешаем цикл и обработчик на каждую
   let playButtons = document.querySelectorAll('.play');
-  for (let i = 0; i < playButtons.length; i++); {
+  for (let i = 0; i < playButtons.length; i++) {
     playButtons[i].addEventListener('click', playStop);
   } 
 
@@ -53,7 +53,7 @@ function playStop(){
     // запуск
     video.play();
     // обновляем ползунок каждые 15 милисекунд
-    intervalId = setInterval(updateDuraton, 1000 / 66);
+    intervalId = setInterval(updateDuration , 1000 / 66);
   } else {
     // видео не стоит на паузе , значит ставим на паузу
     video.pause();
@@ -63,7 +63,7 @@ function playStop(){
 }
 
 
-function updateDuraton(){
+function updateDuration(){
   durationControl.value = video.currentTime;
 }
 
@@ -82,7 +82,7 @@ function setVideoDuration(){
 
   // обновляем ползунок каждые 15 милисикунд
   video.currentTime = durationControl.value;
-  intervalId = setInterval(updateDuraton, 1000/66);
+  intervalId = setInterval(updateDuration, 1000 / 66);
 }
 
 // управление звуком
