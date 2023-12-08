@@ -696,19 +696,19 @@
             <div class="video__container">
               <div class="video_player">
                 <video id="video"  poster="./img/PlayerBaground.png" src="#">
-                  <source src="./img/СЕРФИНГ НА серфинга на гигантских волнах .mp4" type="video/mp4">
+                  <source src="./img/Серфинг.mp4" type="video/mp4">
                 </video>
-                <img class="play video__play" src="./img/SVG/playIcoBig.svg" alt="">
+                <img class="play video__play" src="./img/SVG/playIcoBig.svg" alt="play__icon">
               </div>
               <div class="video__toolbar">
                 <div class="duration">
-                  <img src="./img/SVG/playIcosmall.svg" alt="icon" class="duration__icon play">
-                  <input type="range" class="duration__length" id="durationLevel">
+                  <img src="./img/SVG/playIcosmall.svg" alt="icon" class="duration__icon  play"  >
+                  <input type="range" class="duration__length" id="durationLevel" min="0">
                 </div>
                 <div class="sound">
-                  <img src="./img/SVG/soud__icon.svg" alt="icon" class="sound__img">
+                  <img src="./img/SVG/soud__icon.svg" alt="icon" class="sound__img" id="micLevel">
                   <div class="sound__volume">
-                    <input type="range" class="duration__lentgth__other" id="#volumeLevel" min="0" max="10">
+                    <input type="range" class="duration__lentgth duration__lentgth__other" id="volumeLevel" min="0" max="10">
                   </div>
                 </div>
               </div>
