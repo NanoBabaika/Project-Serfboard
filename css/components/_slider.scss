@@ -169,44 +169,29 @@
 .slider__block {
     display: flex;
     flex-direction: row;
+    position: relative;
      
 
     @include tablets {
        width: 520px;
-       height: 312px;
     }
 }
 
 .slider__arrows {
     display: block;
-}
-
-.arrow__left {
-    position: relative;
-    top: 285px;
-    right: 0;
-
-    @include tablets {
-        top: 92%;
-        right: 150%;
-    }
-
-}
-
-
-
-.arrow__right {
-    position: relative;
-    top: rem(240px);
-    right: -965px;
-
+    position: absolute;
+    top: 50%;
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @include tablets {
-        right: -2180%;
-        top: 80%;
+        width: 90%;
      }
 }
 
+ 
 // Выпадашка
 .parameters__menu{
     position: relative;
