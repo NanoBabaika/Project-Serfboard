@@ -1,17 +1,36 @@
- 
 let myMap;
 
 const init = () => {
     myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
         center: [45.066115, 38.985679],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 12
+        zoom: 12,
+        controls:[]
     });
-}
 
+    const coords = [
+        [38.968108, 45.028738],
+        [38.961065, 45.022922],
+    ];
+
+
+    const myCollection = new ymaps.GeoObjectCollection({}, {
+        draggable:false,
+        iconLayout:'default#image',
+        iconImageHref:'./img/SVG/placeMark.svg',
+        iconImageSize:[46, 57],
+        iconImageOffset:[-35, -52]
+    });
+
+    
+    for(let i = 0; i < coords.length; i++){
+        myCollection.add(new ymaps.Placemark(coords[i]));
+    }
+
+    myMap.geoObjects.add(myCollection);
+
+    myMap.behaviors.disable('scrollZoom');
+};
+
+ 
 ymaps.ready(init);
+ 
