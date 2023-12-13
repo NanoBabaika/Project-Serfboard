@@ -1337,6 +1337,10 @@ template {
   color: #FFF;
 }
 
+.input-error {
+  border: solid red;
+}
+
 .fixed__menu {
   position: fixed;
   top: 20%;
