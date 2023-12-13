@@ -16,15 +16,14 @@ const init = () => {
     const myCollection = new ymaps.GeoObjectCollection({}, {
         draggable:false,
         iconLayout:'default#image',
-        iconImageHref:'./img/SVG/placeMark.svg',
+        iconImageHref:"./img/SVG/placeMark.svg",
         iconImageSize:[46, 57],
         iconImageOffset:[-35, -52]
-    });
+    })
 
-    
-    for(let i = 0; i < coords.length; i++){
-        myCollection.add(new ymaps.Placemark(coords[i]));
-    }
+    coords.forEach(coord => {
+        myCollection.add(new ymaps.Placemark(coord));
+    });
 
     myMap.geoObjects.add(myCollection);
 

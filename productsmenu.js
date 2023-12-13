@@ -1,9 +1,30 @@
-const messureWidth = () => {
-    return 500;
-}
+const messureWidth = item => {
+    let reqItemWidth = 0;
+    const creenWidth = $(window).width();
+    const container =item.closest(".products__menu")
+    const titleBlocks = container.find(".products__menu-title")
+    const titleWidth = titleBlocks.width() * titleBlocks.length;
+
+    const textContainer = item.find(".products__menu-container");
+    const paddingLeft = parseInt(textContainer.css("padding-left"));
+    const paddingRight = parseInt(textContainer.css("padding-right"));
+    
+    const isMobile = window.matchMedia("(max-width:768px)").matches;
+
+    if(isMobile) {
+        reqItemWidth = creenWidth - titleWidth;
+    } else {
+        reqItemWidth = 500;
+    }
+
+    return{
+        container: reqItemWidth,
+        textContainer: reqItemWidth - paddingLeft - paddingRight
+    }
+ };
 
 const closeEveryItemInContainer = container => {
-    const items = container.find(".products__menu");
+    const items = container.find(".products__menu-item");
 
     const content = container.find(".products__menu-content");
 
@@ -13,10 +34,12 @@ const closeEveryItemInContainer = container => {
 
 const openprodItem = item => {
     const hiddenContent = item.find(".products__menu-content");
-    const reqWidth = messureWidth();
+    const reqWidth = messureWidth(item);
+    const textBlock = item.find(".products__menu-container");
 
     item.addClass("active");
-    hiddenContent.width(reqWidth);
+    hiddenContent.width(reqWidth.container);
+    textBlock.width(reqWidth.textContainer);
 }
 
 $(".products__menu-title").on("click", e => {
@@ -28,10 +51,17 @@ $(".products__menu-title").on("click", e => {
     const container = $this.closest(".products__menu");
 
     if(itemOpened){
-        closeEveryItemInContainer()
+        closeEveryItemInContainer(container);
     }else{
+        closeEveryItemInContainer(container);
         openprodItem(item);
     }
 
-  
 });
+
+
+$(".products__menu-close").on("click", e => {
+    e.preventDefault();
+
+    closeEveryItemInContainer($('.products__menu'));
+})
