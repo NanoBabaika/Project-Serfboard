@@ -1835,8 +1835,15 @@ template {
 .products__menu-section-title {
   color: #fff;
   position: relative;
-  top: -260px;
-  left: -500px;
+  top: -40%;
+  left: -35%;
+}
+
+.products__menu-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .products__menu {
@@ -1864,7 +1871,7 @@ template {
 .products__menu-title {
   position: relative;
   width: 100px;
-  top: 388px;
+  height: 100%;
 }
 
 .products__menu-desc {
@@ -1875,6 +1882,9 @@ template {
   line-height: normal;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  position: absolute;
+  top: 80%;
+  right: -60%;
 }
 
 .products__menu-content {
@@ -1884,6 +1894,7 @@ template {
   overflow: hidden;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+  height: 100%;
 }
 
 .products__menu-container {

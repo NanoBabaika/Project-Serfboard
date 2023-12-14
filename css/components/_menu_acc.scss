@@ -12,8 +12,14 @@
 .products__menu-section-title {
     color: #fff;
     position: relative;
-    top: -260px;
-    left: -500px;
+    top: -40%;
+    left: -35%;
+}
+
+.products__menu-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .products__menu {
@@ -33,8 +39,7 @@
 .products__menu-title {
     position: relative;
     width: 100px;
-    top: 388px;     
-
+    height: 100%; 
 }
 
 .products__menu-desc {
@@ -44,6 +49,9 @@
     font-weight: 700;
     line-height: normal;
     transform: rotate(-90deg);
+    position: absolute;
+    top: 80%;
+    right: -60%;
 }
 
 .products__menu-content {
@@ -52,6 +60,7 @@
     position: relative;
     overflow: hidden;
     transition: .7s;
+    height: 100%;
 }
 
 .products__menu-container {
