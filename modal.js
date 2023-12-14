@@ -40,34 +40,35 @@ $('.form').submit(e => {
                 comment:comment.val(),
                 to:to.val(),
             },
-            success: (data) =>{
-                modalContent.text(data.message)
-                console.log(data);
-                // отображение модалки
-                $.fansybox.open ({
-                    src:"#modal",
-                    type:"inline"
-                });
-            },
-            error: (data) => {
-                const message = data.responseJSON.message;
-                modalContent.text(message);
-                console.log(data);
-                modal.addClass("error-modal");
-
             
-                // отображение модалки
-                $.fansybox.open ({
-                    src:"#modal",
-                    type:"inline"
-                });
-            }
+        });
+
+        request.done((data) => {
+            modalContent.text(data.message)
+            console.log(data);
+        });
+
+        request.fail((data) =>{
+            const message = data.responseJSON.message;
+            modalContent.text(message);
+            console.log(data);
+            modal.addClass("error-modal");
+        });
+
+        // вызов модального окна
+        request.always((data) =>{
+            $.fansybox.open ({
+                src:"#modal",
+                type:"inline"
+            });
         });
     }
 
  
 });
 
+
+// Закрытие модального окна
 $(".app-submit-btn").click(e =>{
     e.preventDefault();
 
