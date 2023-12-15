@@ -1,0 +1,37 @@
+.footer {
+    display: flex;
+}
+
+.footer__container {
+    width: 1100px;
+    height: 93px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adress {
+  color: #292929; 
+  font-size: rem(21px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: rem(24px);
+}
+
+.footer__phone {
+    color: #292929; 
+}
+ 
+
+.social__list {
+    display: flex;
+}
+
+.social__item {
+    margin-right: rem(14px);
+}
+
+.social__item:last-child{
+    margin-right: 0;
+}
