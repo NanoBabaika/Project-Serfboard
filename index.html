@@ -17,7 +17,7 @@
     <div class="wrapper">
       <div class="maincontent">
         <!-- Секция хедера -->
-        <section class="section hero first is-active">
+        <section data-sidemenu-theme="white" data-section-id="hero" class="section hero first is-active">
           <div class="container  hero__container">
 
             <header class="header">
@@ -25,22 +25,22 @@
               <nav class="menu">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a href="#" class="menu__link">О нас</a>
+                    <a href="#" data-scroll-to="second" class="menu__link">О нас</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Серфборды</a>
+                    <a href="#" data-scroll-to="third" class="menu__link">Серфборды</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Команда</a>
+                    <a href="#" data-scroll-to="fourth" class="menu__link">Команда</a>
                   </li>
                   <li class="menu__item">
                     <a href="#" class="menu__link">Меню</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Отзывы</a>
+                    <a href="#" data-scroll-to="five"  class="menu__link">Отзывы</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Как мы работаем</a>
+                    <a href="#"  data-scroll-to="six" class="menu__link">Как мы работаем</a>
                   </li>
                   <li class="menu__item">
                     <a href="#" class="menu__link">Контакты</a>
@@ -100,7 +100,7 @@
           </div>
         </section>
  
-        <section class="section second">
+        <section data-sidemenu-theme="white" data-section-id="second" class="section second">
           <div class="container">
             <div class="headline">
               <h2 class="section__title headline__title">почему Surfboard?</h2>
@@ -152,7 +152,7 @@
         </section>
  
         <!-- секция со слайдеромы -->
-        <section class="section slider__section third">
+        <section  data-sidemenu-theme="white" data-section-id="third" class="section slider__section third">
             <div class="container slider__container">
                
 
@@ -414,7 +414,7 @@
             </div>
         </section>
 
-        <section  class="section team__section fourth">
+        <section  data-sidemenu-theme="white" data-section-id="fourth" class="section team__section fourth">
           <div class="container">
             <h2 class="section__title">команда</h2>
             <ul class="team-list team--version--desktop">
@@ -549,7 +549,7 @@
         </section>
 
         <!-- секция аккордеон -->
-        <section class="section products__menu-section five" >
+        <section data-sidemenu-theme="white" data-section-id="five" class="section products__menu-section five" >
             <h2 class="section__title  products__menu-section-title">Меню</h2>
             <ul class="products__menu">
                   <!-- элементр аккордеон1 -->
@@ -598,7 +598,7 @@
             </ul>
         </section>
         <!-- секция отзывов -->
-        <section class="section six">
+        <section data-sidemenu-theme="black" data-section-id="six" class="section six">
           <div class="container">
             <h2 class="section__title">отзывы</h2>
             <div class="rewiev">
@@ -688,7 +688,7 @@
           </div>
         </section>
         <!-- секция с видео -->
-        <section class="section seven">
+        <section data-sidemenu-theme="white" data-section-id="seven" class="section seven">
           <div class="container contaier_video-section">
             <h2 class="section__title">как мы работаем</h2>
             <div class="video__container">
@@ -717,7 +717,7 @@
         </section>
 
         <!-- секция заказ доски -->
-        <section class="section order__section eight">
+        <section data-sidemenu-theme="white" data-section-id="eight" class="section order__section eight">
             <div class="container">
             <h2 class="section__title section__title-orders">закажите доску</h2>
              <form class="form" autocomplete="off">
@@ -823,7 +823,7 @@
             </div>
         </section>
         <!-- Секция с картой -->
-        <section class="section section__map nine">
+        <section data-sidemenu-theme="white" data-section-id="nine" class="section section__map nine">
           <div class="map" id="map"></div>
           <footer class="footer">
             <div class="container footer__container">
@@ -873,38 +873,39 @@
  
 
     <!-- фиксрованное меню -->
-    <nav class="fixed__menu">
+    <nav class="fixed__menu fixed-menu--shadowed">
       <ul class="fixed__menu-list pagination">
         <!-- fixed__menu-item--active -->
         <li class="fixed__menu-item  is-active">
-          <a href="#" class="fixed__menu-link" data-scroll-to="0"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="hero"></a>
         </li>
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="1"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="second"></a>
         </li>
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="2"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="third"></a>
         </li>
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="3"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="fourth"></a>
         </li>
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="4"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="five"></a>
         </li>
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="5"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="six"></a>
         </li>
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="6"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="seven"></a>
         </li>
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="7"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="eight"></a>
         </li>
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="8"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="nine"></a>
         </li>
+        <!-- Почему то не работает -->
         <li class="fixed__menu-item">
-          <a href="#" class="fixed__menu-link" data-scroll-to="0"></a>
+          <a href="#" class="fixed__menu-link" data-scroll-to="hero"></a>
         </li>
       </ul>
     </nav>
@@ -957,10 +958,12 @@
      </div>
     
      <script src="./jquery.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.5/mobile-detect.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+     <script type="text/javascript" src="./jquery.touchSwipe.min.js"></script>
      <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
      <script src="./json.txt"></script>
-    <script src="./OPS2.js"></script>
+     <script src="./OPS_touch.js"></script>
      <script src="./player.js"></script>
      <script src="./productsmenu.js"></script>
      <script src="./acco.js"></script>
@@ -969,6 +972,7 @@
     <script src="./slider.js" ></script>
     <script src="./tabs.js"></script>
     <script src="./map.js"></script>
+  
 
   </body>
 </html>
